@@ -1,39 +1,58 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import ExamsDropdown from "../../components/Home/ExamsDropdown";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isExamsOpen, setIsExamsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Courses", path: "/courses" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-  ]
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex items-center gap-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="text-2xl font-bold text-[#EF5350]"
           >
-            Study<span className="text-[#43A047]">World</span>
+            Edu<span className="text-[#43A047]">Club</span>
           </motion.div>
+          <div
+            className="relative group"
+            onMouseEnter={() => setIsExamsOpen(true)}
+            onMouseLeave={() => setIsExamsOpen(false)}
+          >
+            <motion.div
+              className="text-[#2E2E2E] hover:text-[#EF5350] font-medium cursor-pointer px-6 py-2 border border-3-solid rounded-lg group-hover:border-[#EF5350] transition-colors"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
+            >
+              Exams
+            </motion.div>
+            <ExamsDropdown isOpen={isExamsOpen} />
+          </div>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-8 relative">
+          {/* Enhanced Exams Dropdown */}
+
           {navItems.map((item, index) => (
             <motion.a
               key={index}
@@ -74,7 +93,7 @@ const Header = () => {
           className="md:hidden bg-white"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {navItems.map((item, index) => (
+            {[...navItems, { name: "Exams", path: "#" }].map((item, index) => (
               <a
                 key={index}
                 href={item.path}
@@ -91,7 +110,7 @@ const Header = () => {
         </motion.div>
       )}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
