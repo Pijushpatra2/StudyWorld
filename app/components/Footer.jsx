@@ -14,8 +14,8 @@ const Footer = () => {
               transition={{ duration: 0.5 }}
               className="mb-6"
             >
-              <div className="text-2xl font-bold text-white">
-                EDU<span className="text-[#43A047]">CLUB</span>
+              <div className="text-2xl font-bold text-[#EF5350]">
+                Edu<span className="text-[#43A047]">Club</span>
               </div>
               <p className="mt-2 text-white/70">Make Life Valuable</p>
             </motion.div>

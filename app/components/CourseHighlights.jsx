@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const courses = [
   {
     id: 1,
-    title: "Web Development Bootcamp",
-    category: "Programming",
+    title: "Mathematics Foundations: Numbers & Operations",
+    category: "Mathematics",
     rating: 4.9,
     students: 1234,
     image: "/placeholder.svg?height=200&width=300",
@@ -15,8 +15,8 @@ const courses = [
   },
   {
     id: 2,
-    title: "Data Science Fundamentals",
-    category: "Data Science",
+    title: "English Grammar & Writing Skills",
+    category: "English",
     rating: 4.8,
     students: 987,
     image: "/placeholder.svg?height=200&width=300",
@@ -26,8 +26,8 @@ const courses = [
   },
   {
     id: 3,
-    title: "Digital Marketing Mastery",
-    category: "Marketing",
+    title: "Physics Essentials: Force & Motion",
+    category: "Science",
     rating: 4.7,
     students: 756,
     image: "/placeholder.svg?height=200&width=300",
@@ -37,8 +37,8 @@ const courses = [
   },
   {
     id: 4,
-    title: "UX/UI Design Principles",
-    category: "Design",
+    title: "Environmental Science: Our Planet & Us",
+    category: "EVS",
     rating: 4.9,
     students: 543,
     image: "/placeholder.svg?height=200&width=300",
@@ -50,11 +50,11 @@ const courses = [
 
 const categories = [
   "All Categories",
-  "Programming",
-  "Data Science",
-  "Marketing",
-  "Design",
-  "Business",
+  "Mathematics",
+  "English",
+  "Science",
+  "EVS",
+  "Arts",
 ];
 
 const CourseCard = ({ course, index }) => {

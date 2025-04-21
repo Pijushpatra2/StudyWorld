@@ -40,7 +40,7 @@ export default function About() {
           >
             <div className="relative h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="/home/dm.jpg?height=1000&width=800"
+                src="/home/about.avif?height=1000&width=800"
                 alt="Student Learning Illustration"
                 fill
                 className="object-cover"
@@ -58,7 +58,7 @@ export default function About() {
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     variants={fadeIn}
-                    className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg transition duration-300 hover:scale-105"
+                    className="flex flex-col items-center justify-center bg-white/70 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg transition duration-300 hover:scale-105"
                   >
                     {stat.icon}
                     <span className="text-2xl font-bold text-[#43A047] mt-2">{stat.value}</span>

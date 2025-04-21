@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 const CtaSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-[#EF5350] to-[#E53935]">
+    <section className="py-16 bg-gradient-to-r from-[#f16663] to-[#f5a6a5]">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div
@@ -33,7 +33,7 @@ const CtaSection = () => {
                   </svg>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-white font-bold">500+ Courses</h3>
+                  <h3 className="text-white font-bold">80k+ Courses</h3>
                   <p className="text-white/70 text-sm">In various categories</p>
                 </div>
               </motion.div>

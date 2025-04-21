@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import heroimg from "@/public/home/dm.jpg";
+import heroimg from "@/public/home/hero.png";
 
 const Hero = () => {
   return (
@@ -13,13 +13,13 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2E2E2E] leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#2E2E2E] leading-tight">
             Learn, Grow, and <span className="text-[#EF5350]">Succeed</span>
           </h1>
-          <p className="mt-4 text-xl text-[#2E2E2E]/80 font-medium">
+          <p className="mt-4 text-2xl text-[#2E2E2E]/80 font-medium">
             Make Life Valuable
           </p>
-          <p className="mt-6 text-[#2E2E2E]/70 max-w-lg mx-auto md:mx-0">
+          <p className="mt-6 text-[#2E2E2E]/70 max-w-lg mx-auto md:mx-0 text-xl">
             Join thousands of students worldwide and transform your future with
             our expert-led courses, personalized learning paths, and supportive
             community.
@@ -50,17 +50,37 @@ const Hero = () => {
           <Image
             src={heroimg}
             alt="Students learning online"
-            className="w-full h-auto rounded-lg shadow-xl"
+            className="w-full h-auto"
             placeholder="blur"
           />
-          <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+<div className="absolute -top-6 -right-6 backdrop-blur-md bg-white/60 border border-white/30 p-3 rounded-xl shadow-2xl hidden md:block">
+  <div className="flex items-center gap-4">
+    <div className="bg-[#43A047] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
+       <svg
+          className="w-6 h-6"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M9 2a1 1 0 0 0-1 1v1H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V3a1 1 0 0 0-1-1H9zm0 2h6v1H9V4zm0 4h6v2H9V8zm0 4h6v2H9v-2zm0 4h4v2H9v-2z"/>
+        </svg>
+    </div>
+    <div>
+      <div className="text-[#2E2E2E] font-semibold text-base">
+        Over 80k+ Tests
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-2xl hidden md:block">
             <div className="flex items-center gap-3">
               <div className="bg-[#43A047] h-10 w-10 rounded-full flex items-center justify-center text-white font-bold">
                 4.9
               </div>
               <div>
                 <div className="text-[#2E2E2E] font-semibold">
-                  Trusted by 10k+ students
+                  Trusted by 20k+ students
                 </div>
                 <div className="flex">
                   {[1, 2, 3, 4, 5].map((star) => (
